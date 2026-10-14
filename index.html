@@ -24,6 +24,52 @@
             background-color: var(--color-background);
             color: var(--color-text);
         }
+
+        header {
+            background-color: var(--color-surface);
+        }
+
+        nav {
+            display: flex;
+            min-height: 72px;
+            align-items: center;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            gap: 28px;
+            padding: 12px 24px;
+        }
+
+        nav a {
+            color: var(--color-text);
+            font-weight: 600;
+            text-decoration: none;
+            /* Makes the color change smooth and gradual over 0.2 seconds
+             (does not change the color by itself) */
+            transition: color 0.2s ease, background-color 0.2s ease;
+        }
+        /* Changes some properties of the element when hovering the mouse over it */
+        nav a:hover {
+            color: var(--color-accent);
+        }
+
+        nav a:last-child {
+            padding: 10px 18px;
+            border-radius: 999px;
+            background-color: var(--color-accent);
+            color: var(--color-surface);
+        }
+
+        nav a:last-child:hover {
+            background-color: var(--color-text);
+            color: var(--color-surface);
+        }
+
+        nav a:first-child {
+            margin-right: auto;
+            color: var(--color-accent);
+            font-size: 1.35rem;
+            font-weight: 800;
+        }
     </style>
 </head>
 <body>
