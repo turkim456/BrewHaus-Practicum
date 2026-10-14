@@ -70,6 +70,47 @@
             font-size: 1.35rem;
             font-weight: 800;
         }
+
+        .hero {
+            margin: 24px 0;
+            /* Responsive padding: 
+           - Top/Bottom: min (40px), preferred (7vw), max (80px)
+           - Left/Right: min (24px), preferred (6vw), max (72px) */
+            padding: clamp(40px, 7vw, 80px) clamp(24px, 6vw, 72px);
+            /* Border-radius: Corner rounding
+             - turns sharp 90-degree corners into smooth, rounded edges */
+            border-radius: 40px;
+            background-color: var(--color-surface);
+        }
+
+        .hero h1 {
+            margin: 0 0 16px;
+            /* Responsive font size: scales smoothly 
+            between min, preferred (vw), and max values */
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            line-height: 1.1;
+        }
+
+        .hero p {
+            max-width: 620px;
+            margin: 0 0 24px;
+            color: var(--color-muted);
+            font-size: 1.15rem;
+        }
+
+        .hero-button {
+            display: inline-block;
+            padding: 12px 22px;
+            border-radius: 999px;
+            background-color: var(--color-accent);
+            color: var(--color-surface);
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .hero-button:hover {
+            background-color: var(--color-text);
+        }*/
     </style>
 </head>
 <body>
@@ -83,9 +124,11 @@
     </header>
 
     <main>
-        <h1 id="home">BrewHause</h1>
-        <p>Fresh food, carefully brewed coffee, and a warm place to gather.</p>
-        <a href="#reservation">Book a table</a>
+        <section class="hero" id="home">
+            <h1>BrewHause</h1>
+            <p>Fresh food, carefully brewed coffee, and a warm place to gather.</p>
+            <a class="hero-button" href="#reservation">Book a table</a>
+        </section>
 
         <section id="menu">
             <h2>Our menu</h2>
