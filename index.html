@@ -138,9 +138,7 @@
         }
 
         #about {
-            display: flex;
-            align-items: flex-start;
-            gap: 32px;
+            text-align: center;
             margin: 72px 0;
             padding: 40px 24px;
             border-top: 1px solid #e6ddd3;
@@ -148,13 +146,12 @@
         }
 
         #about h2 {
-            flex: 0 0 240px;
-            margin: 0;
+            margin: 0 0 16px;
         }
 
         #about p {
             max-width: 680px;
-            margin: 0;
+            margin: 0 auto;
             color: var(--color-muted);
             font-size: 1.1rem;
         }
@@ -188,6 +185,64 @@
             border-top: 1px solid rgba(45, 36, 30, 0.15);
             color: var(--color-muted);
             font-size: 0.9rem;
+        }
+
+        #reservation {
+            max-width: 850px;
+            margin: 72px auto;
+            padding: 40px;
+            border-radius: 24px;
+            background-color: var(--color-surface);
+        }
+
+        #reservation h2 {
+            margin-top: 0;
+        }
+
+        #reservation form {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        #reservation form p {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin: 0;
+        }
+
+        #reservation label {
+            font-weight: 600;
+        }
+
+        #reservation input,
+        #reservation select {
+            width: 100%;
+            min-height: 44px;
+            padding: 8px 12px;
+            border: 1px solid #d8cfc4;
+            border-radius: 8px;
+            background-color: var(--color-background);
+            color: var(--color-text);
+            font: inherit;
+        }
+
+        #reservation button {
+            grid-column: 1 / -1;
+            justify-self: start;
+            padding: 12px 22px;
+            border: 0;
+            border-radius: 999px;
+            background-color: var(--color-accent);
+            color: var(--color-surface);
+            font: inherit;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        #reservation button:hover {
+            background-color: var(--color-text);
         }
     </style>
 </head>
