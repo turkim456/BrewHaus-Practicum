@@ -111,6 +111,31 @@
         .hero-button:hover {
             background-color: var(--color-text);
         }
+
+        .menu-category {
+            /* Main grid container: splits the menu category into 2 equal columns */
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px;
+            margin: 32px 0;
+        }
+        /* Category section main heading (h3) */
+        .menu-category h3 {
+            grid-column: 1 / -1;
+            margin: 0;
+        }
+        /* Individual item card */
+        .menu-category article {
+            padding: 20px;
+            border: 1px solid #e6ddd3;
+            border-radius: 14px;
+            background-color: var(--color-surface);
+        }
+        /* Individual item title (h4 - smaller sub-heading inside the card) */
+        .menu-category article h4 {
+            margin-top: 0;
+            color: var(--color-accent);
+        }
     </style>
 </head>
 <body>
